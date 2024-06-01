@@ -1,6 +1,7 @@
 import BarChart from "../components/charts/BarChart"
 import { useState } from "react"
 import Data from "../components/charts/Data"
+import { UserData2 } from "../components/charts/Data"
 import LineChart from "../components/charts/LineChart"
 import DoughnutChart from "../components/charts/DoughnutChart"
 
@@ -11,19 +12,28 @@ function Dashboard() {
         datasets: [{
             label: "hello",
             data: Data.map(data => data.subscribers),
-            backgroundColor: ['orange', 'green', 'red'],
+            backgroundColor: ['orange'],
             pointRadius: 1,
             borderJoinStyle: 'bevel',
             tension: 0.3,
             text: '45'
-        }],
+        }, {
+            label: "hello",
+            data: UserData2.map(data => data.subscribers),
+            backgroundColor: ['#001d3d'],
+            pointRadius: 1,
+            borderJoinStyle: 'bevel',
+            tension: 0.3,
+            text: '45'
+        }
+        ],
     })
     return (<div className="grid grid-cols-[0_1fr_0]">
 
         <div className=" col-start-2  col-end-3 grid grid-cols-12">
 
-            <div className="col-start-1 hidden   md:col-end-5  lg:col-end-3 h-screen bg-[#001d3d] 
-            md:flex flex-col items-center
+            <div className="col-start-1 hidden  col-end-2  md:col-end-5  lg:col-end-3 h-screen bg-[#001d3d] 
+            md:flex flex-col items-center  
             ">
                 <div className="w-[180px]">
                     <img src="/img2.png" alt="" />
@@ -65,17 +75,20 @@ function Dashboard() {
                     <div className="min-[600px]:col-start-1 min-[600px]:col-end-3 min-[600px]:row-start-3 min-[600px]:row-end-4
                         xl:row-start-2 xl:row-end-3
                         xl:col-start-1 xl:col-end-4
+                        shadow-[5px_5px_40px_rgba(0,0,0,.3)] p-5
                         ">
                         <BarChart userData={userData} />
                     </div>
                     <div className="line min-[600px]:col-start-1 min-[600px]:col-end-3 min-[600px]:row-start-4 min-[600px]:row-end-5
                         xl:row-start-3 xl:row-end-4
                         xl:col-start-1 xl:col-end-4
+                        shadow-[5px_5px_40px_rgba(0,0,0,.3)] p-5
                         ">
                         <LineChart userData={userData} />
                     </div>
                     <div className="dougnut min-[600px]:col-start-1 min-[600px]:col-end-3 min-[600px]:row-start-5 min-[600px]:row-end-6
-                        lg:col-start-4 lg:col-end-5 lg:row-start-2 lg:row-end-5
+                        lg:col-start-4 lg:col-end-5 lg:row-start-2 lg:row-end-4
+                        shadow-[5px_5px_40px_rgba(0,0,0,.3)] p-5
                         ">
                         <DoughnutChart userData={userData} />
                         <div className="grid gap-2 w-[60%] m-auto mt-5">
