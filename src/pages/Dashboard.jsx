@@ -43,6 +43,7 @@ function Dashboard() {
                     <div className="text-white text-center text-2xl font-[700]">Vishwajeet</div>
                     <div className="text-white text-center text-[12px] ">vcnvim@gmail.com</div>
                 </div>
+
                 <div className="mt-9 w-[90%]">
                     <List label={"Home"} className={"fa-solid fa-house"} />
                     <List label={"File"} className={"fa-solid fa-folder"} />
@@ -57,8 +58,8 @@ function Dashboard() {
             <div className=" col-start-1 md:col-start-5 lg:col-start-3 col-end-13 ">
 
                 <div className="flex justify-between w-[90%] m-auto py-5 font-[500]">
-                    <div className="md:text-4xl">Dashboard User</div>
-                    <div><i className=" md:text-4xl fa-solid fa-bars"></i></div>
+                    <div className="md:text-3xl">Dashboard User</div>
+                    <div><i className=" md:text-3xl fa-solid fa-bars"></i></div>
                 </div>
 
                 <div className="Mainboard grid 
@@ -72,7 +73,7 @@ function Dashboard() {
                     <DashBox label="Likes" symbol="👍" value="3432" />
                     <DashBox label="Rating" symbol="⭐️" value="232" />
 
-                    <div className="min-[600px]:col-start-1 min-[600px]:col-end-3 min-[600px]:row-start-3 min-[600px]:row-end-4
+                    <div className="min-[600px]:col-start-1 min-[600px]:col-end-4 min-[600px]:row-start-3 min-[600px]:row-end-4
                         xl:row-start-2 xl:row-end-3
                         xl:col-start-1 xl:col-end-4
                         shadow-[5px_5px_40px_rgba(0,0,0,.3)] p-5

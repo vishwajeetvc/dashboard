@@ -16,11 +16,11 @@ const routes = createBrowserRouter([
         children: [
             {
                 path: "/login",
-                element: <Login/>,
+                element: <Login />,
             },
             {
                 path: "/signup",
-                element: <Signup/>,
+                element: <Signup />,
             },
             {
                 path: "/fg",
@@ -28,7 +28,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/reset",
-                element: <Reset/>,
+                element: <Reset />,
             },
             {
                 path: "/account",
@@ -36,7 +36,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/dashboard",
-                element: <Dashboard/>,
+                element: <Dashboard />,
             },
         ]
 
