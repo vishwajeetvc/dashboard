@@ -32,8 +32,8 @@ function Dashboard() {
 
         <div className=" col-start-2  col-end-3 grid grid-cols-12">
 
-            <div className="col-start-1 hidden  col-end-2  md:col-end-5  lg:col-end-3 h-screen bg-[#001d3d] 
-            md:flex flex-col items-center  
+            <div className="col-start-1 hidden   md:col-end-5  lg:col-end-4 h-screen bg-[#001d3d] 
+            md:flex flex-col items-center
             ">
                 <div className="w-[180px]">
                     <img src="/img2.png" alt="" />
@@ -43,7 +43,6 @@ function Dashboard() {
                     <div className="text-white text-center text-2xl font-[700]">Vishwajeet</div>
                     <div className="text-white text-center text-[12px] ">vcnvim@gmail.com</div>
                 </div>
-
                 <div className="mt-9 w-[90%]">
                     <List label={"Home"} className={"fa-solid fa-house"} />
                     <List label={"File"} className={"fa-solid fa-folder"} />
@@ -55,16 +54,16 @@ function Dashboard() {
 
             </div>
 
-            <div className=" col-start-1 md:col-start-5 lg:col-start-3 col-end-13 ">
+            <div className=" col-start-1 md:col-start-5 lg:col-start-4 col-end-13 ">
 
                 <div className="flex justify-between w-[90%] m-auto py-5 font-[500]">
-                    <div className="md:text-3xl">Dashboard User</div>
-                    <div><i className=" md:text-3xl fa-solid fa-bars"></i></div>
+                    <div className="md:text-4xl">Dashboard User</div>
+                    <div><i className=" md:text-4xl fa-solid fa-bars"></i></div>
                 </div>
 
                 <div className="Mainboard grid 
-                    sm:grid-rows-[max-content_max-content_max-content]  md:gap-x-10 xl:gap-x-20 gap-y-20  min-[600px]:gap-y-10 px-6
-                    min-[600px]:grid-cols-2
+                    sm:grid-rows-[max-content_max-content_max-content]  md:gap-x-10 xl:gap-x-10 gap-y-10  sm:gap-y-10 px-6 gap-5
+                    sm:grid-cols-2 sm:gap-8
                     xl:grid-cols-4
                     ">
 
@@ -73,22 +72,22 @@ function Dashboard() {
                     <DashBox label="Likes" symbol="👍" value="3432" />
                     <DashBox label="Rating" symbol="⭐️" value="232" />
 
-                    <div className="min-[600px]:col-start-1 min-[600px]:col-end-4 min-[600px]:row-start-3 min-[600px]:row-end-4
+                    <div className="sm:col-start-1 sm:col-end-3 sm:row-start-3 sm:row-end-4
                         xl:row-start-2 xl:row-end-3
                         xl:col-start-1 xl:col-end-4
                         shadow-[5px_5px_40px_rgba(0,0,0,.3)] p-5
                         ">
                         <BarChart userData={userData} />
                     </div>
-                    <div className="line min-[600px]:col-start-1 min-[600px]:col-end-3 min-[600px]:row-start-4 min-[600px]:row-end-5
+                    <div className="line sm:col-start-1 sm:col-end-3 sm:row-start-4 sm:row-end-5
                         xl:row-start-3 xl:row-end-4
                         xl:col-start-1 xl:col-end-4
                         shadow-[5px_5px_40px_rgba(0,0,0,.3)] p-5
                         ">
                         <LineChart userData={userData} />
                     </div>
-                    <div className="dougnut min-[600px]:col-start-1 min-[600px]:col-end-3 min-[600px]:row-start-5 min-[600px]:row-end-6
-                        lg:col-start-4 lg:col-end-5 lg:row-start-2 lg:row-end-4
+                    <div className="dougnut sm:col-start-1 sm:col-end-3 sm:row-start-5 sm:row-end-6
+                        xl:col-start-4 xl:col-end-5 xl:row-start-2 xl:row-end-4
                         shadow-[5px_5px_40px_rgba(0,0,0,.3)] p-5
                         ">
                         <DoughnutChart userData={userData} />
@@ -128,10 +127,10 @@ function DashBox({ label, symbol, value, dark }) {
 
     </>
 }
-function List({ label, className }) {
+function List({ label, className, button }) {
     return <>
 
-        <div className="p-4  justify-self-start">
+        <div className="p-4  justify-self-start hover:cursor-pointer">
             <i className={`text-xl text-white ${className}`}></i>
             <span className="mx-4 text-[18px] text-white">{label}</span>
         </div>
