@@ -8,13 +8,19 @@ import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
 import Reset from './pages/Reset.jsx'
 import Dashboard from './pages/Dashboard.jsx'
+import Home from './pages/Home.jsx'
 
 const routes = createBrowserRouter([
     {
         path: "/",
-        // element: <App />,
-        element: <Dashboard />,
+        element: <App />,
+        // element: <Dashboard />,
         children: [
+            {
+                // path: "/home",
+                element: <Home />,
+                index: true,
+            },
             {
                 path: "/login",
                 element: <Login />,
